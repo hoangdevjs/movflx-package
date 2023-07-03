@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
@@ -7,6 +8,14 @@ import styles from "@/styles/Home.module.css";
 const inter = Inter({ subsets: ["latin"] });
 
 const Home = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
   return (
     <div>
       {/* <!-- preloader --> */}
@@ -1509,23 +1518,6 @@ const Home = () => {
         </div>
       </footer>
       {/* <!-- footer-area-end --> */}
-
-      {/* <!-- JS here --> */}
-      <script src="js/vendor/jquery-3.6.0.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/isotope.pkgd.min.js"></script>
-      <script src="js/imagesloaded.pkgd.min.js"></script>
-      <script src="js/jquery.magnific-popup.min.js"></script>
-      <script src="js/owl.carousel.min.js"></script>
-      <script src="js/jquery.odometer.min.js"></script>
-      <script src="js/jquery.appear.js"></script>
-      <script src="js/slick.min.js"></script>
-      <script src="js/ajax-form.js"></script>
-      <script src="js/wow.min.js"></script>
-      <script src="js/aos.js"></script>
-      <script src="js/plugins.js"></script>
-      <script src="js/main.js"></script>
     </div>
   );
 };

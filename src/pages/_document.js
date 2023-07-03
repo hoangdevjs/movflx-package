@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <script src="js/vendor/jquery-3.6.0.min.js"></script>
-        <script src="js/popper.min.js"></script>
+        {/* <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/isotope.pkgd.min.js"></script>
         <script src="js/imagesloaded.pkgd.min.js"></script>
@@ -18,7 +18,7 @@ export default function Document() {
         <script src="js/wow.min.js"></script>
         <script src="js/aos.js"></script>
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/main.js"></script> */}
       </Head>
       <body>
         <Main />
